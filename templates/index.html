@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   
+    <meta charset="utf-8">
+    <title>Ejemplo Flask</title>
+  </head>
+  <body>
+  <!-- As a heading -->
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand mb-0 h1">Navbar</span>
+    </nav>
+    <br><br>
+    
+    <form action = "/" method = "POST" 
+      enctype = "multipart/form-data">
+      <div class="row">
+        <div class="col-4"></div>
+        
+        <div class="col-2">
+        
+        <input type="file" class="form-control" name="file" />
+        
+        </div>
+        <br>
+        
+        <input class="btn btn-primary" type = "submit"/>
+  
+      </div>
+      <br>
+      <br>
+
+    </form>   
+   
+
+    <form>
+      <div class="form-row">
+        <div class="col-1">
+        </div>
+
+        <div class="col-2">
+        
+          <h5>First Name</h5>
+          {% if Fname|length %}
+          <input type="text" class="form-control" placeholder="{{Fname}}">
+          {% else %}
+          <input type="text" class="form-control" placeholder="First Name">
+          {% endif %}
+
+
+
+        </div>
+        <div class="col-2">
+          <h5>Second Name</h5>
+          {% if Lname|length %}
+          <input type="text" class="form-control" placeholder="{{Lname}}">
+          {% else %}
+          <input type="text" class="form-control" placeholder="Second Name">
+          {% endif %}
+
+        </div>
+        <div class="col-2">
+          <h5>Email Adress</h5>
+          {% if email|length %}
+          <input type="text" class="form-control" placeholder="{{email}}">
+          {% else %}
+          <input type="text" class="form-control" placeholder="Email Adress">
+          {% endif %}
+
+        </div>
+        <div class="col-2">
+          <h5>Contact no.</h5>
+          {% if contact|length %}
+          <input type="text" class="form-control" placeholder="{{contact}}">
+          {% else %}
+          <input type="text" class="form-control" placeholder="Contact no.">
+          {% endif %}
+
+        </div>
+        
+
+      </div>
+    </form>
+
+  </body>
+</html>
